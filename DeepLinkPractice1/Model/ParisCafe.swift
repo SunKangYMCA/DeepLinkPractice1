@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct ParisCafe: Identifiable, Hashable {
+    var id: String
+    var name: String
+    var rating: String
+    var picture: String
+}

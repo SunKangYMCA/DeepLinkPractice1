@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+enum ParisCafeTab {
+    case home, search, setting
+    
+    var title: String {
+        switch self {
+        case .home:
+            return "Home"
+        case .search:
+            return "Search"
+        case .setting:
+            return "Setting"
+        }
+    }
+}
