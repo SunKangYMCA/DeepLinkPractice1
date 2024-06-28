@@ -11,6 +11,10 @@
 		04D7CAA92C2E14C5004C827C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7CAA82C2E14C5004C827C /* ContentView.swift */; };
 		04D7CAAB2C2E14C7004C827C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D7CAAA2C2E14C7004C827C /* Assets.xcassets */; };
 		04D7CAAE2C2E14C7004C827C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D7CAAD2C2E14C7004C827C /* Preview Assets.xcassets */; };
+		04D7CAB62C2E168E004C827C /* DeepLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7CAB52C2E168E004C827C /* DeepLinkManager.swift */; };
+		04D7CABA2C2E232D004C827C /* ParisCafeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7CAB92C2E232D004C827C /* ParisCafeTab.swift */; };
+		04D7CABC2C2E244E004C827C /* ParisCafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7CABB2C2E244E004C827C /* ParisCafe.swift */; };
+		04D7CABE2C2E2E60004C827C /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7CABD2C2E2E60004C827C /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		04D7CAA82C2E14C5004C827C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04D7CAAA2C2E14C7004C827C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D7CAAD2C2E14C7004C827C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04D7CAB52C2E168E004C827C /* DeepLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkManager.swift; sourceTree = "<group>"; };
+		04D7CAB92C2E232D004C827C /* ParisCafeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCafeTab.swift; sourceTree = "<group>"; };
+		04D7CABB2C2E244E004C827C /* ParisCafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCafe.swift; sourceTree = "<group>"; };
+		04D7CABD2C2E2E60004C827C /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 		04D7CAA52C2E14C5004C827C /* DeepLinkPractice1 */ = {
 			isa = PBXGroup;
 			children = (
+				04D7CAB42C2E1673004C827C /* Managers */,
+				04D7CAB72C2E2305004C827C /* Model */,
 				04D7CAA62C2E14C5004C827C /* DeepLinkPractice1App.swift */,
 				04D7CAA82C2E14C5004C827C /* ContentView.swift */,
 				04D7CAAA2C2E14C7004C827C /* Assets.xcassets */,
@@ -65,6 +75,32 @@
 				04D7CAAD2C2E14C7004C827C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04D7CAB42C2E1673004C827C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04D7CAB52C2E168E004C827C /* DeepLinkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		04D7CAB72C2E2305004C827C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04D7CABB2C2E244E004C827C /* ParisCafe.swift */,
+				04D7CABD2C2E2E60004C827C /* DataSource.swift */,
+				04D7CAB82C2E2314004C827C /* Enum */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04D7CAB82C2E2314004C827C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				04D7CAB92C2E232D004C827C /* ParisCafeTab.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D7CABE2C2E2E60004C827C /* DataSource.swift in Sources */,
+				04D7CABC2C2E244E004C827C /* ParisCafe.swift in Sources */,
 				04D7CAA92C2E14C5004C827C /* ContentView.swift in Sources */,
 				04D7CAA72C2E14C5004C827C /* DeepLinkPractice1App.swift in Sources */,
+				04D7CABA2C2E232D004C827C /* ParisCafeTab.swift in Sources */,
+				04D7CAB62C2E168E004C827C /* DeepLinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
