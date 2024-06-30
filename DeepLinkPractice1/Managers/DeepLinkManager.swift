@@ -60,3 +60,4 @@ class DeepLinkManager: ObservableObject {
     //MVVM을 준수하기 위하여 updateNavigationPath를 만들어 적용했다.
     //NavigationPath을 비우기 위해 일반적으로도 initialize를 하는지 다른 방법이 있는지 궁금함.
 }
+    
