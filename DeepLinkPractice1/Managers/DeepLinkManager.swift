@@ -11,10 +11,7 @@ import SwiftUI
 class DeepLinkManager: ObservableObject {
     @Published var navigationPath = NavigationPath()
     @Published var currentTab: ParisCafeTab = .home
-    @Published var currentDetailCafeID: String = ""
-    // @Published var currentDetailCafeID: String?
-    // Tutorial에서는 옵셔널을 사용했는데 왜 그랬는지 모르겠어서 Default value를 주고
-    // Test 중
+    @Published var currentDetailCafeID: String?
     
     func checkDeepLink(url: URL) -> Bool {
         guard let deepLinkComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)?.host else {
@@ -52,4 +49,14 @@ class DeepLinkManager: ObservableObject {
     func resetNavigationPath() {
         navigationPath = NavigationPath()
     }
+    
+    func updateNavigationPath() {
+        resetNavigationPath()
+        if let selectedCafeID = currentDetailCafeID,
+           let selectedCafe = DataSource.data.first(where: { $0.id == selectedCafeID }) {
+            navigationPath.append(selectedCafe)
+        }
+    }
+    //MVVM을 준수하기 위하여 updateNavigationPath를 만들어 적용했다.
+    //NavigationPath을 비우기 위해 일반적으로도 initialize를 하는지 다른 방법이 있는지 궁금함.
 }

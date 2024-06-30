@@ -29,6 +29,17 @@ struct SearchView: View {
                 DetailView(cafe: cafe)
             }
         }
+        .onAppear(perform: {
+            print("## 1. Used .onAppear")
+            deepLinkManager.updateNavigationPath()
+        })
+        
+        .onChange(of: deepLinkManager.currentDetailCafeID) {
+            print("## 2. Used .onChange")
+            deepLinkManager.updateNavigationPath()
+        }
+        //처음엔 onAppear만으로 충분하다고 생각했으나 동작이 되었다가 안되었다.
+        //검색해보니 onChange와 같이 쓰면서 print를 사용해 디버깅하라고 알게되었다.
     }
 }
 
