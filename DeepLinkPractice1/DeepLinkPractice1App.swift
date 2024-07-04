@@ -16,7 +16,9 @@ struct DeepLinkPractice1App: App {
                 .environmentObject(deepLinkManager)
                 .onOpenURL(perform: { url in
                     if deepLinkManager.checkDeepLink(url: url) {
-                        print("yes")
+                        print("DeepLink OK!")
+                    } else {
+                        print("SomeThing Wrong!!")
                     }
                     //Text결과 checkDeepLink를 한번 실행해 줘야 Deeplink가 정상동작한다.
                 })
