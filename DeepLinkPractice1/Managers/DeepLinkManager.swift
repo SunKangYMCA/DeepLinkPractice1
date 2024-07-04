@@ -34,12 +34,10 @@ class DeepLinkManager: ObservableObject {
     }
     
     func checkInternalDeeplinks(component: String) -> Bool {
-        if let index = DataSource.data.firstIndex(where: { cafe in
-        cafe.id == component
-        }) {
+        if let cafe = DataSource.data.first(where: {$0.id == component}) {
             currentTab = .search
             resetNavigationPath()
-            currentDetailCafeID = DataSource.data[index].id
+            currentDetailCafeID = cafe.id
             return true
         }
         
